@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3352232",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "9",
+      "unicode_decimal": 9
+    },
+    {
+      "icon_id": "9212643",
+      "name": "首页",
+      "font_class": "shouye1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "14030613",
+      "name": "首页",
+      "font_class": "shouye2",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "38351094",
+      "name": "首页",
+      "font_class": "shouye3",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "44044238",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    }
+  ]
+}

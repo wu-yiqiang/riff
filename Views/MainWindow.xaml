@@ -1,0 +1,63 @@
+﻿<Window x:Class="riff.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:riff"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localControls="clr-namespace:riff.Controls"
+        Title="Riff" Height="600" Width="1100">
+        <WindowChrome.WindowChrome>
+            <WindowChrome GlassFrameThickness="1" UseAeroCaptionButtons="True" />
+        </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <FontFamily x:Key="FF">../Assets/Fonts/#iconfont</FontFamily>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#F8FFFB"
+                              Offset="0" />
+                <GradientStop Color="#FAFAFE"
+                              Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380" />
+            <ColumnDefinition Width="*"  />
+        </Grid.ColumnDefinitions>
+        <Border Width="1" Background="#19000000" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Border Height="90"
+                        Width="90"
+                        >
+                    <Border.Background>
+                        <ImageBrush ImageSource="../Assets/Images/Logo.png"
+                                    Stretch="UniformToFill"
+                                    Opacity="0.5" />
+                    </Border.Background>
+                </Border>
+                <TextBlock Text="Riff Music" VerticalAlignment="Center" Foreground="Orange" FontSize="18" FontWeight="Bold"/>
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <localControls:MenuControl Grid.Row="0" />
+                <localControls:MenuControl Grid.Row="1" />
+                <localControls:MenuControl Grid.Row="2" />
+                <localControls:MenuControl Grid.Row="3" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
