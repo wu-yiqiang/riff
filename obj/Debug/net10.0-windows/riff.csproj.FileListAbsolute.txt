@@ -23,3 +23,8 @@ D:\riff\obj\Debug\net10.0-windows\riff_Content.g.cs
 D:\riff\obj\Debug\net10.0-windows\Controls\MenuControl.g.cs
 D:\riff\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\riff\obj\Debug\net10.0-windows\Controls\MenuControl.baml
+D:\riff\obj\Debug\net10.0-windows\riff.sourcelink.json
+D:\riff\obj\Debug\net10.0-windows\Views\HomePage.g.cs
+D:\riff\obj\Debug\net10.0-windows\Views\HomePage.baml
+D:\riff\obj\Debug\net10.0-windows\Controls\SubmenuControl.g.cs
+D:\riff\obj\Debug\net10.0-windows\Controls\SubmenuControl.baml

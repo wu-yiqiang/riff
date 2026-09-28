@@ -9,50 +9,78 @@
              d:DesignWidth="800">
     <Control.Resources>
         <FontFamily x:Key="FF">../Assets/Fonts/#iconfont</FontFamily>
-        <Style x:Key="SelectableBorderStyle"
-               TargetType="Border">
-            <Setter Property="BorderThickness"
-                    Value="2" />
-            <Setter Property="BorderBrush"
-                    Value="Gray" />
-            <Setter Property="Background"
-                    Value="White" />
-            <Setter Property="Padding"
-                    Value="10" />
-            <Setter Property="Focusable"
-                    Value="True" />
-            <Style.Triggers>
-                <Trigger Property="IsFocused"
-                         Value="True">
-                    <Setter Property="BorderBrush"
-                            Value="#409EFF" />
-                    <Setter Property="Background"
-                            Value="#ECF5FF" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
     </Control.Resources>
-    <StackPanel HorizontalAlignment="Left"
-                VerticalAlignment="Center">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Border Grid.Column="0"
-                    Style="{StaticResource SelectableBorderStyle}">
-                <Grid HorizontalAlignment="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0"
-                               Text="&#xe603;" Margin="0,0,6,0" FontFamily="{StaticResource FF}" FontSize="20" />
-                    <TextBlock Grid.Column="1"
-                               Text="首页"
-                               FontSize="16" />
-                </Grid>
-            </Border>
-        </Grid>
-    </StackPanel>
-   
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+        <Border Padding="0,6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Rectangle Width="3"
+                           Grid.Column="0"
+                           RadiusX="2"
+                           RadiusY="2"
+                           HorizontalAlignment="Center">
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill"
+                                    Value="Transparent" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                             Value="True">
+                                    <Setter Property="Fill"
+                                            Value="#409EFF" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+                <StackPanel Grid.Column="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="30,0,0,0"
+                            Cursor="Hand">
+                    <TextBlock Text="{Binding Icon}"
+                               Margin="0,0,4,0"
+                               FontFamily="{StaticResource FF}"
+                               FontSize="24"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Foreground"
+                                        Value="#8B8682" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                 Value="True">
+                                        <Setter Property="Foreground"
+                                                Value="#409EFF" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style></TextBlock>
+                    <TextBlock Text="{Binding Label}"
+                               FontSize="14"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Foreground"
+                                        Value="#8B8682" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                 Value="True">
+                                        <Setter Property="Foreground"
+                                                Value="#409EFF" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
 </UserControl>

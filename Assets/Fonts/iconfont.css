@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1790525946503') format('truetype');
+  src: url('iconfont.ttf?t=1790604664409') format('truetype');
 }
 
 .iconfont {
@@ -11,23 +11,47 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-shouye:before {
-  content: "\9";
+.icon-paihang:before {
+  content: "\e607";
 }
 
-.icon-shouye1:before {
-  content: "\e603";
+.icon-1_music72:before {
+  content: "\e6ac";
 }
 
-.icon-shouye2:before {
-  content: "\e628";
+.icon-tubiaozhuanqu-18:before {
+  content: "\e644";
 }
 
-.icon-shouye3:before {
-  content: "\e73d";
+.icon-a-xiaofeipaihang2x:before {
+  content: "\e602";
 }
 
-.icon-music:before {
-  content: "\e63d";
+.icon-cancel:before {
+  content: "\e76c";
+}
+
+.icon-favoriteslist:before {
+  content: "\e76d";
+}
+
+.icon-nickname:before {
+  content: "\e76e";
+}
+
+.icon-mark:before {
+  content: "\e76f";
+}
+
+.icon-playlist:before {
+  content: "\e770";
+}
+
+.icon-search:before {
+  content: "\e771";
+}
+
+.icon-caidan:before {
+  content: "\e778";
 }
 

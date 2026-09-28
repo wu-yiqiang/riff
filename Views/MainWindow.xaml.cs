@@ -21,6 +21,13 @@ namespace riff.Views
         {
             InitializeComponent();
             this.DataContext = new MainViewModel();
+            MenuHome.IsSelected = true;
+        }
+
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            var menus = new[] { MenuHome, MenuPlaylist, MenuSinger, MenuRank };
+            foreach (var m in menus) m.IsSelected = ReferenceEquals(m, sender);
         }
     }
 }
