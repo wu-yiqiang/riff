@@ -1,4 +1,5 @@
-﻿using System;
+﻿using riff.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,7 @@ namespace riff.Views
         public HomePage()
         {
             InitializeComponent();
+            this.DataContext = new HomePageViewModel();
         }
     }
 }

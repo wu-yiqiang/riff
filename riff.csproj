@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Assets\Images\Icon\Logo-128x128.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Images\Logo\128x128.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,12 +15,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\Images\Icon\Logo-128x128.ico" />
+    <Content Include="Assets\Images\Logo\128x128.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\Images\Icon\" />
     <Folder Include="Assets\Styles\" />
     <Folder Include="Base\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack.NetCore" Version="1.5.0.1" />
   </ItemGroup>
 
   <ItemGroup>

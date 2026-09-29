@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xx1YoB6GVwc=",
+  "dgSpecHash": "q1vpfdFBDOo=",
   "success": true,
   "projectFilePath": "D:\\riff\\riff.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sutter\\.nuget\\packages\\htmlagilitypack.netcore\\1.5.0.1\\htmlagilitypack.netcore.1.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
