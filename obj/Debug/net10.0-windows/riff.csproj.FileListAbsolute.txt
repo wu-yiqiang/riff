@@ -30,3 +30,5 @@ D:\riff\obj\Debug\net10.0-windows\Controls\SubmenuControl.g.cs
 D:\riff\obj\Debug\net10.0-windows\Controls\SubmenuControl.baml
 D:\riff\bin\Debug\net10.0-windows\HtmlAgilityPack.NetCore.dll
 D:\riff\obj\Debug\net10.0-windows\riff.csproj.AssemblyReference.cache
+D:\riff\obj\Debug\net10.0-windows\Controls\RankingListControl.g.cs
+D:\riff\obj\Debug\net10.0-windows\Controls\RankingListControl.baml

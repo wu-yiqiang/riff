@@ -5,47 +5,113 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
+using System.Windows.Controls;
 
 namespace riff.ViewModels
 {
     class HomePageViewModel
     {
+        public ObservableCollection<AlbumModel> NewSongList { get; set; } = new ObservableCollection<AlbumModel>();
+        public ObservableCollection<AlbumModel> HotSongList { get; set; } = new ObservableCollection<AlbumModel>();
+        public ObservableCollection<AlbumModel> OriginalSongList { get; set; } = new ObservableCollection<AlbumModel>();
         public ObservableCollection<AlbumModel> AlbumList { get; set; } = new ObservableCollection<AlbumModel>();
 
+        //public async Task<string> GetMusicData()
+        //{
+        //    var url = "https://app.c.nf.migu.cn/column/column-info/h5/v2.0?columnId=75577835";
+        //    var json = await _client.GetStringAsync(url);
+        //    return json;
+        //}
+        public void Init()
+        {
+            for (int i = 1; i < 12; i++)
+            {
+                if((i % 2) == 1)
+                {
+                    AlbumList.Add(new AlbumModel
+                    {
+                        Id = "90625796",
+                        Title = "小小的我",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y6/be320a3b4fa3497ca9624132b378d688.webp",
+                        Author = "罗云熙",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                    NewSongList.Add(new AlbumModel
+                    {
+                        Id = "90494921",
+                        Title = "Falling 4 U",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y8/d24887f701284f48a1c7b37864ca226c.webp",
+                        Author = "Mr.岑",
+                        TragetUrl = "",
+                        Index= i
+                    });
+                    HotSongList.Add(new AlbumModel
+                    {
+                        Id = "90625796",
+                        Title = "小小的我",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y6/be320a3b4fa3497ca9624132b378d688.webp",
+                        Author = "罗云熙",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                    OriginalSongList.Add(new AlbumModel
+                    {
+                        Id = "90625796",
+                        Title = "小小的我",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y6/be320a3b4fa3497ca9624132b378d688.webp",
+                        Author = "罗云熙",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                }
+                else
+                {
+                    AlbumList.Add(new AlbumModel
+                    {
+                        Id = "90494921",
+                        Title = "Falling 4 U",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y8/d24887f701284f48a1c7b37864ca226c.webp",
+                        Author = "Mr.岑",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                    NewSongList.Add(new AlbumModel
+                    {
+                        Id = "90625796",
+                        Title = "小小的我",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y6/be320a3b4fa3497ca9624132b378d688.webp",
+                        Author = "罗云熙",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                    HotSongList.Add(new AlbumModel
+                    {
+                        Id = "90494921",
+                        Title = "Falling 4 U",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y8/d24887f701284f48a1c7b37864ca226c.webp",
+                        Author = "Mr.岑",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                    OriginalSongList.Add(new AlbumModel
+                    {
+                        Id = "90494921",
+                        Title = "Falling 4 U",
+                        Cover = "https://d.musicapp.migu.cn/data/oss/column/00/1w/y8/d24887f701284f48a1c7b37864ca226c.webp",
+                        Author = "Mr.岑",
+                        TragetUrl = "",
+                        Index = i
+                    });
+                }
+            }
+        }
         public HomePageViewModel()
         {
-            WebClient wc = new WebClient();
-            wc.Encoding = Encoding.UTF8;
-            string htmlStr = wc.DownloadString("https://music.migu.cn/v5/#/musicLibrary");
-            HtmlDocument htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(htmlStr);
-            //HtmlNodeCollection liNode = htmlDoc.DocumentNode.SelectNodes("//div[@class='thumb]");
-            //Debug.WriteLine(htmlStr);
-             
-            //if (liNode != null && liNode.Count > 0)
-            //{
-            //    for (int i = 0; i < 10; i++)
-            //    {
-            //        var node = liNode[i].ChildNodes[1];
-            //        var a = node.ChildNodes[1];
-            //        var img = node.ChildNodes[1];
-            //        var src = img.Attributes["data-src"].Value;
-
-            //        node = liNode[i].ChildNodes[3];
-            //        var name = node.ChildNodes[1].ChildNodes[1].InnerText;
-            //        var author = node.ChildNodes[3].ChildNodes[1].InnerText;
-            //        var id = node.ChildNodes[5].Attributes["data-id"].Value;
-            //        AlbumList.Add(new AlbumModel
-            //        {
-            //            Id= id,
-            //            Cover="https://"+src,
-            //            Author= author,
-            //            Title=name
-            //        });
-
-            //    }
-            //}
+            Init();
         }
     }
 }

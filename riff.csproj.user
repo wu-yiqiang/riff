@@ -5,6 +5,9 @@
     <Compile Update="Controls\MenuControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\RankingListControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\SubmenuControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
